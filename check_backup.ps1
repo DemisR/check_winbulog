@@ -64,19 +64,21 @@ $OkNbEv = 1
 
 
 
-if ($CritNbEv -ne 0 ) {
-Write-Host "CRITICAL - Found multiple errors in Microsoft-Windows-Backup event log"
-exit $returnStateCritical
-}
+
 
 if ($WarnNbEv -ne 0) {
 Write-Host "WARNING - Found multiple warning in Microsoft-Windows-Backup event log"
 exit $returnStateWarning
-}
 
 if ($OkNbEv -ne 0 ) {
 Write-Host "OK - No errors in Microsoft-Windows-Backup log "
 exit $returnStateOK
+}
+
+if ($CritNbEv -ne 0 ) {
+Write-Host "CRITICAL - Found multiple errors in Microsoft-Windows-Backup event log"
+exit $returnStateCritical
+}
 }
 else
 {
