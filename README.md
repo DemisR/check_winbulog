@@ -18,6 +18,11 @@ Set-ExecutionPolicy remotesigned
 Restart service NSClient++
 
 _On powershell_
-````
+```
 Restart-Service NSClientpp
+```
+
+Enable feature .NET Framework
+```
+DISM /Online /Enable-Feature /FeatureName:NetFx3
 ```

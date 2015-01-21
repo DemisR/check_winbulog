@@ -50,7 +50,7 @@ $WarnNbEv = 0
 }
 else
 {
-$CritNbEv = 1
+$WarnNbEv = 1
 }
 
 if ($OkNbEv -eq $Null -and $OkEvents -eq $Null )
@@ -77,4 +77,8 @@ exit $returnStateWarning
 if ($OkNbEv -ne 0 ) {
 Write-Host "OK - No errors in Microsoft-Windows-Backup log "
 exit $returnStateOK
+}
+else
+{
+exit $returnStateUnknown
 }
