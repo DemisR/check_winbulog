@@ -20,7 +20,7 @@ Restart service NSClient++
 
 _On powershell_
 ```
-Restart-Service NSClientpp
+Restart-Service nscp
 ```
 
 Enable feature .NET Framework
