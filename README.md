@@ -4,7 +4,7 @@
 
 Copy script check_backup.ps1 in NSClient++  scripts folder on  Windows Server Client
 
-Edit NSC.ini  (config file for NSclient++) and add in section [External Scripts]
+Edit nsclient.ini  (config file for NSclient++) and add in section [External Scripts]
 ```
 check_backup=cmd /c echo scripts\check_backup_win2012.ps1; exit($LastExitCode) | powershell.exe -command -
 ```
