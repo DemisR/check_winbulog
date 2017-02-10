@@ -79,3 +79,27 @@ On Windows server 2012 simply use command :
 ```
 get-wbjob -previous 1
 ```
+
+## Nagios configuration example
+
+Nagios Command configuration
+
+```
+define command {
+    command_name check_windows_backup_logs
+    command_line $USER1$/check_nrpe -2 -H $HOSTADDRESS$ -c check_backup
+}
+```
+
+Nagios Service configuration
+
+```
+define service{
+        use                     generic-service
+        host_name               Server1
+        service_description     Windows Backup Status
+        check_command           check_windows_backup_logs
+        notification_interval   0
+        check_interval 		    1440
+        }
+```
