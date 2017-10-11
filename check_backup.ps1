@@ -35,14 +35,15 @@ catch
 
 
 
-if ($CritNbEv -eq $Null -and $CritEvents -eq $Null )
+if (($CritNbEv -eq $Null -and $CritEvents -eq $Null) -or $CritNbEv -eq 0)
 {
-    $CritNbEv = 0
+$CritNbEv = 0
 }
 else
 {
-    $CritNbEv = 1
+$CritNbEv = 1
 }
+
 
 if ($WarnNbEv -eq $Null -and $WarnEvents -eq $Null )
 {
